@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Configuration
 LOG_DIR="/var/log/storage-breaker"
 LOG_FILE="$LOG_DIR/application.log"
 
@@ -15,7 +14,7 @@ if [ -s "$LOG_FILE" ]; then
     
     # 2. Recreate a fresh, empty application.log file so the app can keep writing
     touch "$LOG_FILE"
-    chmod 664 "$LOG_FILE" # Adjust permissions to match your app's requirements
+    chmod 664 "$LOG_FILE" 
     
     # 3. Zip the renamed file (-j ignores paths so the zip contains just the file)
     zip -j "$ZIP_FILE" "$RENAMED_LOG"
