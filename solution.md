@@ -55,16 +55,8 @@ Found that the storage was completely full.
 
 ## Solution
 
-### 1. Attach and Mount a Temporary EBS Volume
 
-Attach a temporary EBS volume to the EC2 instance and mount it. Move the application log file to the temporary mount point.
-
-<img width="636" height="222" alt="Screenshot 2026-07-17 at 9 08 43 PM" src="https://github.com/user-attachments/assets/e4702a63-d8ac-4de5-ae17-89a7019120e5" />
-
-
----
-
-### 2. Archive Logs and Upload to Amazon S3
+### 1. Archive Logs and Upload to Amazon S3
 
 Create a Linux script named log-rotator.sh that runs every hour to:
 
@@ -115,7 +107,7 @@ fi
 
 ---
 
-### 3. Configure CloudWatch Monitoring
+### 2. Configure CloudWatch Monitoring
 
 Set up the CloudWatch Agent.
 
